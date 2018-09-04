@@ -5,7 +5,7 @@
 # Find out more about building applications with Shiny here:
 #
 #    http://shiny.rstudio.com/
-#hello
+#
 
 library(shiny)
 
@@ -13,7 +13,7 @@ library(shiny)
 ui <- fluidPage(
    
    # Application title
-   titlePanel("Old Faithful Data"),
+   titlePanel("Star Wars"),
    
    # Sidebar with a slider input for number of bins 
    sidebarLayout(
