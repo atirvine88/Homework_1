@@ -23,14 +23,22 @@ ui <- fluidPage(
       sidebarPanel(
           selectInput(inputId = "y",
                       label = "Do you think the Titanic sunk?",
-                     choices = c("Yes", "It did in the movie, but I'm not sure"),
+                     choices = c("Yes", "No", "It did in the movie, but I'm really not sure"),
                      selected = "Yes"
                      ),
           sliderInput(inputId = "hours",
                       label = "How many hours did the Titanic take to sink?",
-                      value = 2,
+                      value = c(2,5),
                       min = 0,
-                      max = 10)
+                      max = 10,
+                      step = 0.25),
+          checkboxGroupInput(inputId = "reasons",
+                             label = "Why did the Titanic sink?",
+                             choices = c("The captain wasn't paying attention",
+                                         "Rose was distracting the captain",
+                                         "Aliens",
+                                         "An iceberg",
+                                         "The Titanic didn't sink"))
           
           
       ),
